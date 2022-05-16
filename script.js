@@ -25,18 +25,21 @@ for(let i = 0;i < btn.length  ; i++ ) {
 
     btn[i].addEventListener('click', ()=>{
         // btn[i].innerText = 1;  
-        x.innerText = 1 ;
-        pbtn[i].style.display = 'inline-block' ;
-        mbtn[i].style.display = 'inline-block' ;
-        
+ 
         // update 
         let prodQuant = btn[i].parentElement.previousElementSibling   ; 
         let prodQuant1 = prodQuant.getElementsByClassName('quantity-s')[0]    ;
         console.log(prodQuant1.innerText ) ;
-     
-        let  str = prodQuant1.innerText-1  ;
+        if(prodQuant1.innerText ==5 ) {
+            x.innerText = 1 ;
+            pbtn[i].style.display = 'inline-block' ;
+            mbtn[i].style.display = 'inline-block' ;
+            
+            let  str = prodQuant1.innerText-1  ;
         
-        prodQuant1.innerText  = str ;
+            prodQuant1.innerText  = str ;
+        
+        }
     })   
     
     mbtn[i].addEventListener('click', ()=>{
@@ -95,19 +98,3 @@ function mbtnClicked(_btn , _pbtn , _mbtn ) {
 
 
 }
-
-
-
-
-
-
-function  addval( x ) {
-    console.log("inside " , x.parentElement) ;
-    console.log(x.parentElement.childNodes[3]) ;
-    let currElem  = x.parentElement.childNodes[3] ;
-    console.log(currElem.innerText  ) ; 
-    
-   
-    
-}
-
