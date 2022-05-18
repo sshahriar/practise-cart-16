@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/8f27d68390.js"
+    crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="stye.css">
@@ -13,21 +17,41 @@
 </head>
 
 <body>
- 
-    <div class="nav-bar">
-        <nav> 
-            <div class="item-count" id ="btn1"> 
-                <i class="fa" style="font-size:24px">&#xf07a;</i>
-                <span class='badge badge-warning' id='lblCartCount'> 0 </span>
-        
+    <header>    
+        <h1>Shop online</h1>
+        <div class="cart-box" >
+            <div class="cart-icon" id= "cart-icon"><i class="fas fa-cart-arrow-down fa-2x non-empty"></i></div>
+            <div class="whole-cart-window">
+                 <h2>Shopping Cart </h2> 
+                <div class="cart-wrapper" >
+                </div>
+                <!--    <div class="cart-item" id="1" >
+                        <img src="images/1.jpg">
+                        <div class="details">
+                            <h4>Item Name</h4>
+                            <p> 
+                                <div class="card-btn-cart" > 
+                                    <button class="minusBtnc">-</button>
+                                    <span class="cartQuantity">1 </span>
+                                    <button class="plusBtnc">+</button>
+                                    
+                                </div>
+                            
+                                <span class="price">Subtotal: $23.44 </span>  
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                <!-- </div> -->
+                <div class="checkout">Total: $0</div> 
             </div>
-        
-            <!-- <button type="button"  id="btn" >Cart</button> -->
-        
-        </nav> 
-    </div>
+
+
+        </div> 
+    </header>
+    
     <div class="container" id="content" >
-        <div class="card" > 
+        <div class="card" id="1"  > 
             <div class="card-image laptop-1" id="/images/1.jpg"> </div>
            
             <!-- <div class="productImage">
@@ -37,7 +61,7 @@
                 <h3>Razer Blade</h3>
             </div>
             <div class="productPrice">
-                <h3>$12,00</h3>
+                <h3>$1000</h3>
             </div>
             <div class="productQuantity">
                 <h3> 
@@ -45,7 +69,7 @@
                     <span class="quantity-s"> 5 </span>
                 </h3>
             </div>
-            <div class="card-btn" id="btn1" >
+            <div class="card-btn" >
                 <button class="minusBtn">-</button>
                 <button class="mainBtn">Add to cart</button>
                 <button class="plusBtn">+</button>
@@ -53,109 +77,120 @@
             </div>
             
         </div>
-         <div class="card" > 
+        <div class="card" id="2"  > 
+            <div class="card-image laptop-2" id="/images/2.jpg"> </div>
            
-           <div class="card-image laptop-3" id="/images/3.jpg"> </div>
+            <!-- <div class="productImage">
+                <img src="images/1.jpg" class='img'>
+            </div> -->
             <div class="productTitle">
-                <h3>Asus Tuf</h3>
+                <h3>Dell Alienware</h3>
             </div>
             <div class="productPrice">
-                <h3>$15,00</h3>
-            </div>  
-            
+                <h3>$1100</h3>
+            </div>
             <div class="productQuantity">
                 <h3> 
                     Total availabe:
                     <span class="quantity-s"> 5 </span>
                 </h3>
             </div>
-            
-            <div class="card-btn" id="btn2" >
+            <div class="card-btn" >
                 <button class="minusBtn">-</button>
                 <button class="mainBtn">Add to cart</button>
                 <button class="plusBtn">+</button>
                 
             </div>
-        </div> 
-        <div class="card" > 
+            
+        </div>
+        <div class="card" id="3"  > 
+            <div class="card-image laptop-3" id="/images/1.jpg"> </div>
            
-            <div class="card-image laptop-2" id="/images/2.jpg"> </div>
-             <div class="productTitle">
-                 <h3>Hp Victus</h3>
-             </div>
-             <div class="productPrice">
-                 $15,00
-             </div>  
-             <div class="card-btn"  id="btn2">Add To Cart</div>
-             
-         </div> 
-         <div class="card" > 
+            <!-- <div class="productImage">
+                <img src="images/1.jpg" class='img'>
+            </div> -->
+            <div class="productTitle">
+                <h3>Asus tuf</h3>
+            </div>
+            <div class="productPrice">
+                <h3>$1000</h3>
+            </div>
+            <div class="productQuantity">
+                <h3> 
+                    Total availabe:
+                    <span class="quantity-s"> 5 </span>
+                </h3>
+            </div>
+            <div class="card-btn" >
+                <button class="minusBtn">-</button>
+                <button class="mainBtn">Add to cart</button>
+                <button class="plusBtn">+</button>
+                
+            </div>
+            
+        </div>
+        <div class="card" id="4"  > 
+            <div class="card-image laptop-4" id="/images/1.jpg"> </div>
            
-            <div class="card-image laptop-4" id="/images/4.jpg"> </div>
-             <div class="productTitle">
-                 <h3>Msi Katana</h3>
-             </div>
-             <div class="productPrice">
-                 <h3>$15,00</h3>
-             </div>  
-             <div class="card-btn"  id="btn2">Add To Cart</div>
-             
-         </div> 
-         <div class="card" > 
+            <!-- <div class="productImage">
+                <img src="images/1.jpg" class='img'>
+            </div> -->
+            <div class="productTitle">
+                <h3>HP Victus</h3>
+            </div>
+            <div class="productPrice">
+                <h3>$1100</h3>
+            </div>
+            <div class="productQuantity">
+                <h3> 
+                    Total availabe:
+                    <span class="quantity-s"> 5 </span>
+                </h3>
+            </div>
+            <div class="card-btn" >
+                <button class="minusBtn">-</button>
+                <button class="mainBtn">Add to cart</button>
+                <button class="plusBtn">+</button>
+                
+            </div>
+            
+        </div>
+        <div class="card" id="5"  > 
+            <div class="card-image laptop-5" id="/images/1.jpg"> </div>
            
-            <div class="card-image laptop-5" id="/images/5.jpg"> </div>
-             <div class="productTitle">
-                 <h3>Alienware</h3>
-             </div>
-             <div class="productPrice">
-                 <h3>$15,00</h3>
-             </div>  
-             <div class="card-btn"  id="btn2">Add To Cart</div>
-             
-         </div> 
-   
-   
-   
+            <!-- <div class="productImage">
+                <img src="images/1.jpg" class='img'>
+            </div> -->
+            <div class="productTitle">
+                <h3>iphone 5</h3>
+            </div>
+            <div class="productPrice">
+                <h3>$1000</h3>
+            </div>
+            <div class="productQuantity">
+                <h3> 
+                    Total availabe:
+                    <span class="quantity-s"> 5 </span>
+                </h3>
+            </div>
+            <div class="card-btn" >
+                <button class="minusBtn">-</button>
+                <button class="mainBtn">Add to cart</button>
+                <button class="plusBtn">+</button>
+                
+            </div>
+            
+        </div>
+        
 
     </div>
          
 
-    <!-- // cart careful with below      -->
-    <div id="cart1">
-        <div class="cartContainer">
-            <div class="row">
-                <div class="col-xs-3 heading"> Product</div>
-                <div class="col-xs-3 heading"> Title</div> 
-                
-                <div class="col-xs-3 heading"> Price</div>
-                <div class="col-xs-3 heading">Action</div>
-
-            </div>
-
-        </div>
-
-        <div class="row totalPrice">
-            <div class="col-xs-3 "> </div>
-            <div class="col-xs-3 "> </div>
-
-            <div class="col-xs-3 headingTop"> Total </div>
-            <div class="col-xs-3 headingTop cartTotalPrice"> 0</div>
-        </div>
-    </div>
-
     
-    
-    
+
     
     <script defer src='script.js'></script>
-    <script>
-    
-    </script>
-
-
-
-
-
+    <!-- <script defer src='script1.js'></script> -->
 
 
 </body>
