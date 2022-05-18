@@ -261,11 +261,10 @@ function updateCart( id ){
             <span class="price">Subtotal: $${sub_tot} </span>  
         
         </div> 
+        <button class="cancel">x </button>
+    
     `
 
-    console.log("------------------------------------")  ;
-    console.log( cartItem.childNodes[3].childNodes[5].childNodes) ;
-    
     cartWrapper.append( cartItem)   ;
 
     let mbtnc =  cartItem.childNodes[3].childNodes[5].childNodes[1] ;
@@ -279,10 +278,56 @@ function updateCart( id ){
     addCount() ;
     // addSubtotal(id) ;
 
+    console.log( "add-----------------------------------") ;
+    console.log(cartItem.parentElement.childNodes[1].childNodes);
+    
+    addCrossEvent(id) ;
+    console.log( "-----------------------------------ed") ;
+    
+
+}
+function addCrossEvent(id ){
+    // console.log("adding cross eev"  ) ;
+    let divs=  document.querySelectorAll('.cart-item' ) ;
+    let _button   ;
+    for(let i = 0 ;i< divs.length ;i++  ) {
+        if(divs[i].getAttribute('id') == id ) {
+            _button = divs[i] ; 
+            break ; 
+        }   
+    }
+    _button  = _button.childNodes[5];
+    // console.log(_button)  ;
+    _button.addEventListener('click' , removeItemFromCart) ;
+} 
+function removeItemFromCart(e) {
+
+    // console.log("x clicked"  ) ;
+    // console.log(e.target.parentElement) ;
+    let par_elem = e.target.parentElement ; 
+    let id = par_elem.getAttribute('id') ;
+    let cost = cart_cnt[id]* item_cost[id] ;
+    // console.log(id , cost) ;
+    // console.log(par_elem) ;
+    // par_elem.remove() ;
+
+    // adjust total 
+    let total = document.querySelector('.checkout') ;
+    let val = total.innerText.replace('Total: $','') ;
+    val = val- cost;
+    console.log(val) ;
+    total.innerText  = 'Total: $'+ val ;
+    // adjust cart 
+    while(cart_cnt[id] ){
+        console.log("inside " ) ;
+        cart_cnt[id]--;
+        mbtnClicked(id) ; 
+       
+    }
+
 
 
 }
-
 function addTotal(id ){
 
     let tot =  document.querySelector('.checkout') ;
