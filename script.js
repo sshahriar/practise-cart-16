@@ -2,7 +2,7 @@
 let total_cnt =     [ 5, 5, 5, 5, 5, 5, 5 , 5, 5, 5 ] ; 
 let cart_cnt = [ 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0] ; 
 let item_cost = [0 ,1000 ,1100, 1000,1100, 1000,100  ] ; 
-let item_name =["ads" , "Razer Blade", "Dell Alienware", "Asus tuf" ,"HP Victus" , "iphone 5"] ;
+let item_name =["ads" , "Razer Blade", "Dell Alienware", "Asus tuf" ,"HP Victus" , "MSI Raider"] ;
 
 let cartwin = document.querySelector('.cart-icon');
 let whole_cart_window = document.querySelector('.whole-cart-window');
@@ -429,7 +429,7 @@ function cartPlusEvent(e)  {
     console.log(par_div ) ;
     if( cart_cnt[prod_id ]+1 <= total_cnt[prod_id]  ) {
         addTotal(prod_id) ;
-        addSubtotal(id) ;
+        addSubtotal(prod_id) ;
 
         cart_cnt[prod_id]++ ; 
         addItemCart(par_div ,prod_id  ) ; 
